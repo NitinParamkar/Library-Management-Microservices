@@ -15,12 +15,12 @@ public class BorrowController {
     @Autowired
     private BorrowService borrowService;
 
-    @PostMapping
+    @PostMapping("/issue-book")
     public Borrow issueBook(@RequestBody Borrow borrow) {
         return borrowService.issueBook(borrow);
     }
 
-    @GetMapping
+    @GetMapping("/get-issuedBooks")
     public List<Borrow> getAllIssuedBooks() {
         return borrowService.getAllIssuedBooks();
     }

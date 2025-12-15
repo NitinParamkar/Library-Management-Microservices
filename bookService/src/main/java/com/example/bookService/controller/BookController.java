@@ -15,12 +15,12 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @PostMapping
+    @PostMapping("/add-book")
     public Book addBook(@RequestBody Book book) {
         return bookService.addBook(book);
     }
 
-    @GetMapping
+    @GetMapping("/get-all-books")
     public List<Book> getAllBooks() {
         return bookService.getAllBooks();
     }

@@ -15,12 +15,12 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    @PostMapping
+    @PostMapping("/add-student")
     public Student addStudent(@RequestBody Student student) {
         return studentService.addStudent(student);
     }
 
-    @GetMapping
+    @GetMapping("/get-all-students")
     public List<Student> getAllStudents() {
         return studentService.getAllStudents();
     }
